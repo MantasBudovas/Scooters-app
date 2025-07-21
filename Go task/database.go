@@ -72,20 +72,3 @@ func (s *DBStorage) FindScooters(ctx context.Context, minLat, minLng, maxLat, ma
 	}
 	return scooters, nil
 }
-
-// Creates x amount of scooters in the database
-// func SeedScooters(storage *DBStorage, count int) {
-// 	for i := 1; i <= count; i++ {
-// 		id := uuid.New().String()
-// 		lat := 45.0 + rand.Float64()*(46.0-45.0)
-// 		lng := -76.0 + rand.Float64()*3.0
-
-// 		storage.AddOrUpdateScooter(context.Background(), &Scooter{
-// 			ID:         id,
-// 			Status:     "free",
-// 			Latitude:   lat,
-// 			Longitude:  lng,
-// 			LastUpdate: time.Now(),
-// 		})
-// 	}
-// }

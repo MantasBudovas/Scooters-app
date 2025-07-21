@@ -58,6 +58,3 @@ func apiKeyMiddleware(next http.HandlerFunc) http.HandlerFunc {
 		next(w, r)
 	}
 }
-
-// Creates x amount oof Scooters
-// SeedScooters(storage, 5)
