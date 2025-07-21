@@ -1,0 +1,7 @@
+- Only the latest state of each scooter is stored; historical event data (e.g. trip logs) is not retained.
+- Conflict handling when reserving a scooter is done via a safe atomic update at the database level.
+- PostgreSQL was chosen because of its simplicity, reliability, and supports upserts (insert or update) commands.
+- The database contains a single scooters table; no separate tables for events, users were created.
+- Basic error handling is implemented, but no advanced validation or logging is in place.
+- All data is sent and received in JSON format.
+- Testing was performed manually using Postman for all key API interactions.
